@@ -1,23 +1,34 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Handyman business website (profxhandyman) with contact email displayed as plain text.",
-  "architectural_notes": [],
+  "summary": "Website project with a background image section (white text) and remaining sections with black text. Features a PFH logo and statistics like Years Experience, Jobs Completed, and Satisfaction.",
+  "architectural_notes": [
+    "Text color rule: white text only on sections with background image; all other text black"
+  ],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-the-contact-component-replace-the-mailto-anchor-link-for-profxhandyman-gmail-com-with-a-plain-non-clickable-text-element-e-g-a-span-or-p-that-displays-the-email-address-as-static-text",
-      "title": "In the Contact component, replace the mailto anchor link for profxhandyman@gmail.com with a plain, non-clickable text element (e.g., a <span> or <p>) that displays the email address as static text.",
+      "id": "feature-in-all-non-hero-sections-about-services-contact-footer-and-navigation-change-all-text-that-was-previously-overridden-to-white-text-white-back-to-black-text-gray-900-or-equivalent-dark-ink-color-restoring-the-default-dark-text-appearance",
+      "title": "In all non-Hero sections — About, Services, Contact, Footer, and Navigation — change all text that was previously overridden to white (text-white) back to black (text-gray-900 or equivalent dark/ink color), restoring the default dark text appearance.",
       "reqIds": [
-        "REQ-1"
+        "REQ-2"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "In the Hero section (which has the background image), keep all text — including the headline, tagline, stat labels (Years Experience, Jobs Completed, Satisfaction), and the subheading — styled as white (text-white).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
   "gameProjectType": "none",
-  "projectName": "ProfX Handyman",
+  "projectName": "PFH Website",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

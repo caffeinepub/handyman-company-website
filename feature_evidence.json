@@ -2,10 +2,14 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-contact-component-replace-the-mailto-anchor-link-for-profxhandyman-gmail-com-with-a-plain-non-clickable-text-element-e-g-a-span-or-p-that-displays-the-email-address-as-static-text",
-      "featureTitle": "In the Contact component, replace the mailto anchor link for profxhandyman@gmail.com with a plain, non-clickable text element (e.g., a <span> or <p>) that displays the email address as static text.",
+      "featureId": "feature-in-all-non-hero-sections-about-services-contact-footer-and-navigation-change-all-text-that-was-previously-overridden-to-white-text-white-back-to-black-text-gray-900-or-equivalent-dark-ink-color-restoring-the-default-dark-text-appearance",
+      "featureTitle": "In all non-Hero sections — About, Services, Contact, Footer, and Navigation — change all text that was previously overridden to white (text-white) back to black (text-gray-900 or equivalent dark/ink color), restoring the default dark text appearance.",
       "files": [
-        "frontend/src/components/Contact.tsx"
+        "frontend/src/components/About.tsx",
+        "frontend/src/components/Contact.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/components/Services.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +19,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
+        "REQ-2"
       ],
       "confidence": "high"
     }

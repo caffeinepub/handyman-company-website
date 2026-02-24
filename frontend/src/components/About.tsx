@@ -28,13 +28,13 @@ export default function About() {
             <h3 className="font-heading text-2xl font-bold text-ink uppercase tracking-wide mb-6">
               Your Trusted Home Repair Partner
             </h3>
-            <p className="font-body text-ink-light leading-relaxed mb-5 font-medium">
+            <p className="font-body text-ink leading-relaxed mb-5 font-medium">
               Pro Fix Handyman was built on a simple promise: deliver honest, high-quality work at a fair price. With over <strong className="text-orange font-bold">20 years of hands-on experience</strong>, we've helped hundreds of homeowners tackle everything from leaky faucets to full room renovations.
             </p>
-            <p className="font-body text-ink-light leading-relaxed mb-5 font-medium">
+            <p className="font-body text-ink leading-relaxed mb-5 font-medium">
               We believe every home deserves the best care. That's why we show up on time, communicate clearly, and never cut corners — no matter the size of the job.
             </p>
-            <p className="font-body text-ink-light leading-relaxed font-medium">
+            <p className="font-body text-ink leading-relaxed font-medium">
               When you call Pro Fix Handyman, you're not just hiring a contractor — you're partnering with a craftsman who takes pride in every nail, pipe, and brushstroke.
             </p>
 
@@ -55,40 +55,38 @@ export default function About() {
           <div className="relative">
             <div className="bg-snow-off p-8 border-l-4 border-orange shadow-card">
               <div className="text-orange font-heading text-6xl leading-none mb-4 opacity-60">"</div>
-              <blockquote className="font-body text-lg text-ink-light leading-relaxed italic mb-6 font-medium">
+              <blockquote className="font-body text-lg text-ink leading-relaxed italic mb-6 font-medium">
                 I started Pro Fix Handyman because I saw too many homeowners getting overcharged for simple repairs. After 20+ years in the trades, I knew I could do better — and I've been proving it ever since.
               </blockquote>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-orange flex items-center justify-center flex-shrink-0">
-                  <Wrench size={22} className="text-snow" />
+                <div className="w-10 h-10 bg-orange flex items-center justify-center flex-shrink-0">
+                  <span className="text-snow font-heading font-bold text-sm">PF</span>
                 </div>
                 <div>
-                  <p className="font-heading text-ink font-bold tracking-wide uppercase text-sm">
-                    Pro Fix Handyman
-                  </p>
-                  <p className="font-body text-orange text-xs tracking-wider font-semibold">
-                    20+ Years of Trusted Service
-                  </p>
+                  <p className="font-heading font-bold text-ink text-sm uppercase tracking-wide">The Pro Fix Team</p>
+                  <p className="font-body text-xs text-ink">Founder & Master Tradesman</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Highlight Cards */}
+        {/* Highlights Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {highlights.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="bg-snow-off p-6 border border-border hover:border-orange/40 transition-colors duration-300 group shadow-xs"
+              className="flex items-start gap-4 p-6 bg-snow-off border border-border hover:border-orange/40 transition-colors duration-200"
             >
-              <div className="w-10 h-10 bg-orange-subtle flex items-center justify-center mb-4 group-hover:bg-orange/20 transition-colors duration-300">
+              <div className="w-10 h-10 bg-orange-subtle flex items-center justify-center flex-shrink-0">
                 <Icon size={20} className="text-orange" />
               </div>
-              <h4 className="font-heading text-sm font-bold text-ink uppercase tracking-wide mb-2">
-                {title}
-              </h4>
-              <p className="font-body text-xs text-ink-muted leading-relaxed font-medium">{desc}</p>
+              <div>
+                <h4 className="font-heading text-sm font-bold text-ink uppercase tracking-wide mb-1">
+                  {title}
+                </h4>
+                <p className="font-body text-sm text-ink leading-relaxed font-medium">{desc}</p>
+              </div>
             </div>
           ))}
         </div>

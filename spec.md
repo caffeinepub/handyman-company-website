@@ -1,9 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Display the email address in the Contact section as plain, non-clickable text instead of a mailto link.
+**Goal:** Restore text colors so that only the Hero section (with the background image) uses white text, while all other sections revert to black/dark text.
 
 **Planned changes:**
-- Replace the mailto anchor tag for `profxhandyman@gmail.com` in the Contact component with a plain `<span>` or `<p>` element so it renders as static text.
+- Keep all text in the Hero section (headline, tagline, stat labels, subheading) styled as white (`text-white`).
+- Revert all text in the About, Services, Contact, Footer, and Navigation sections from white back to black or dark ink color (`text-gray-900` or equivalent).
 
-**User-visible outcome:** The email address is visible in the Contact section but cannot be clicked and will not open an email client.
+**User-visible outcome:** The page is fully readable with dark text on light section backgrounds, while the hero image section retains its white text for contrast against the background image.

@@ -46,25 +46,25 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="font-body text-sm leading-relaxed text-ink-light font-medium mb-6">
+            <p className="font-body text-sm leading-relaxed text-ink font-medium mb-6">
               Your trusted local handyman service. Quality work, honest pricing, and a commitment to your satisfaction — backed by 20+ years of experience.
             </p>
             <div className="flex flex-col gap-2">
               <a
                 href="tel:2677870190"
-                className="inline-flex items-center gap-2 font-body text-sm text-ink-light hover:text-orange transition-colors duration-200 font-medium"
+                className="inline-flex items-center gap-2 font-body text-sm text-ink hover:text-orange transition-colors duration-200 font-medium"
               >
                 <Phone size={14} className="text-orange" />
                 267-787-0190
               </a>
               <a
                 href="mailto:profxhandyman@gmail.com"
-                className="inline-flex items-center gap-2 font-body text-sm text-ink-light hover:text-orange transition-colors duration-200 font-medium"
+                className="inline-flex items-center gap-2 font-body text-sm text-ink hover:text-orange transition-colors duration-200 font-medium"
               >
                 <Mail size={14} className="text-orange" />
                 profxhandyman@gmail.com
               </a>
-              <span className="inline-flex items-start gap-2 font-body text-sm text-ink-light font-medium">
+              <span className="inline-flex items-start gap-2 font-body text-sm text-ink font-medium">
                 <MapPin size={14} className="text-orange mt-0.5 flex-shrink-0" />
                 Metro City & Surrounding Areas
               </span>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="font-body text-sm text-ink-light hover:text-orange transition-colors duration-200 flex items-center gap-2 group font-medium"
+                    className="font-body text-sm text-ink hover:text-orange transition-colors duration-200 flex items-center gap-2 group font-medium"
                   >
                     <span className="w-3 h-px bg-orange/50 group-hover:w-5 group-hover:bg-orange transition-all duration-200" />
                     {link.label}
@@ -101,7 +101,7 @@ export default function Footer() {
                 <li key={service}>
                   <button
                     onClick={() => handleNavClick('#services')}
-                    className="font-body text-sm text-ink-light hover:text-orange transition-colors duration-200 flex items-center gap-2 group font-medium"
+                    className="font-body text-sm text-ink hover:text-orange transition-colors duration-200 flex items-center gap-2 group font-medium"
                   >
                     <span className="w-3 h-px bg-orange/50 group-hover:w-5 group-hover:bg-orange transition-all duration-200" />
                     {service}
@@ -118,15 +118,15 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 font-body text-sm mb-6">
               <li className="flex justify-between gap-4">
-                <span className="text-ink-light font-medium">Monday – Friday</span>
+                <span className="text-ink font-medium">Monday – Friday</span>
                 <span className="text-ink font-semibold">7am – 7pm</span>
               </li>
               <li className="flex justify-between gap-4">
-                <span className="text-ink-light font-medium">Saturday</span>
+                <span className="text-ink font-medium">Saturday</span>
                 <span className="text-ink font-semibold">8am – 5pm</span>
               </li>
               <li className="flex justify-between gap-4">
-                <span className="text-ink-light font-medium">Sunday</span>
+                <span className="text-ink font-medium">Sunday</span>
                 <span className="text-orange font-bold">Emergency Only</span>
               </li>
             </ul>
@@ -143,10 +143,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-body text-xs text-ink-light font-medium">
+          <p className="font-body text-xs text-ink font-medium">
             © {new Date().getFullYear()} Pro Fix Handyman. All rights reserved.
           </p>
-          <p className="font-body text-xs text-ink-light font-medium flex items-center gap-1">
+          <p className="font-body text-xs text-ink font-medium flex items-center gap-1">
             Built with{' '}
             <Heart size={11} className="text-orange fill-orange" />{' '}
             using{' '}

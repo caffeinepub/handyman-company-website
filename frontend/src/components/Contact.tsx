@@ -38,7 +38,7 @@ export default function Contact() {
           </p>
           <h2 className="section-title text-ink mb-4">Request a Free Quote</h2>
           <div className="w-16 h-1 bg-orange mx-auto mb-6" />
-          <p className="font-body text-ink-light max-w-xl mx-auto text-base leading-relaxed font-medium">
+          <p className="font-body text-ink max-w-xl mx-auto text-base leading-relaxed font-medium">
             Ready to get started? Reach out directly and we'll get back to you within 24 hours with a free, no-obligation estimate.
           </p>
           {/* Service Area Note */}
@@ -64,7 +64,7 @@ export default function Contact() {
                 <h3 className="font-heading text-2xl font-bold text-ink uppercase tracking-wide mb-3">
                   Email Us for a Free Quote
                 </h3>
-                <p className="font-body text-ink-light text-base leading-relaxed font-medium max-w-md">
+                <p className="font-body text-ink text-base leading-relaxed font-medium max-w-md">
                   Simply send us an email describing your project and we'll respond with a free, no-obligation estimate — usually within 24 hours.
                 </p>
               </div>
@@ -80,7 +80,7 @@ export default function Contact() {
               {/* Divider */}
               <div className="w-full flex items-center gap-4">
                 <div className="flex-1 h-px bg-border" />
-                <span className="font-body text-xs text-ink-muted uppercase tracking-widest font-medium">or call us directly</span>
+                <span className="font-body text-xs text-ink uppercase tracking-widest font-medium">or call us directly</span>
                 <div className="flex-1 h-px bg-border" />
               </div>
 
@@ -89,68 +89,47 @@ export default function Contact() {
                 href="tel:2677870190"
                 className="inline-flex items-center gap-2 font-heading text-xl font-bold text-orange hover:text-orange-dark transition-colors duration-200 tracking-wide"
               >
-                <Phone size={20} />
+                <Phone size={22} />
                 267-787-0190
               </a>
             </div>
           </div>
 
-          {/* Contact Info Panel */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="bg-snow border border-border p-6 shadow-xs">
-              <h3 className="font-heading text-base font-bold text-ink uppercase tracking-wide mb-5">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                {contactInfo.map(({ icon: Icon, label, value, href }) => (
-                  <div key={label} className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-orange-subtle flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon size={15} className="text-orange" />
-                    </div>
-                    <div>
-                      <p className="font-heading text-xs font-bold text-ink uppercase tracking-wider mb-0.5">
-                        {label}
-                      </p>
-                      {href ? (
-                        <a
-                          href={href}
-                          className="font-body text-sm text-ink-light hover:text-orange transition-colors duration-200 font-medium"
-                        >
-                          {value}
-                        </a>
-                      ) : (
-                        <p className="font-body text-sm text-ink-light font-medium">{value}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
+          {/* Contact Info Cards */}
+          <div className="lg:col-span-2 flex flex-col gap-4">
+            {contactInfo.map(({ icon: Icon, label, value, href }) => (
+              <div
+                key={label}
+                className="flex items-start gap-4 p-5 bg-snow border border-border hover:border-orange/40 transition-colors duration-200"
+              >
+                <div className="w-10 h-10 bg-orange-subtle flex items-center justify-center flex-shrink-0">
+                  <Icon size={18} className="text-orange" />
+                </div>
+                <div>
+                  <p className="font-heading text-xs font-bold text-ink uppercase tracking-wider mb-1">
+                    {label}
+                  </p>
+                  {href ? (
+                    <a
+                      href={href}
+                      className="font-body text-sm text-ink hover:text-orange transition-colors duration-200 font-medium"
+                    >
+                      {value}
+                    </a>
+                  ) : (
+                    <p className="font-body text-sm text-ink font-medium">{value}</p>
+                  )}
+                </div>
               </div>
-            </div>
-
-            {/* Coverage Area Block */}
-            <div className="bg-orange p-6 shadow-xs">
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin size={16} className="text-snow flex-shrink-0" />
-                <h3 className="font-heading text-sm font-bold text-snow uppercase tracking-wide">
-                  Coverage Area
-                </h3>
-              </div>
-              <p className="font-body text-sm text-snow leading-relaxed font-medium">
-                We proudly serve homeowners and businesses across <strong className="font-bold">Philadelphia, PA</strong> and all the way up through <strong className="font-bold">New Jersey</strong>, including surrounding suburbs and communities.
-              </p>
-            </div>
+            ))}
 
             {/* Emergency Notice */}
-            <div className="bg-snow border-l-4 border-orange p-5 shadow-xs">
-              <p className="font-heading text-xs font-bold text-ink uppercase tracking-wider mb-1">
+            <div className="p-5 bg-orange border border-orange">
+              <p className="font-heading text-xs font-bold text-snow uppercase tracking-wider mb-1">
                 Emergency Services
               </p>
-              <p className="font-body text-sm text-ink-light font-medium">
-                Need urgent help? Call us directly at{' '}
-                <a href="tel:2677870190" className="text-orange font-bold hover:text-orange-dark transition-colors">
-                  267-787-0190
-                </a>{' '}
-                — we offer emergency services on Sundays.
+              <p className="font-body text-sm text-snow font-medium">
+                Available 24/7 for urgent repairs. Call us anytime — we're here when you need us most.
               </p>
             </div>
           </div>

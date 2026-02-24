@@ -41,26 +41,11 @@ export default function Navigation() {
             onClick={() => handleNavClick('#home')}
             className="flex items-center gap-3 group"
           >
-            <div className="w-10 h-10 bg-orange rounded flex items-center justify-center flex-shrink-0">
-              <img
-                src="/assets/generated/logo-icon.dim_256x256.png"
-                alt="Pro Fix Handyman Logo"
-                className="w-8 h-8 object-contain"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerHTML =
-                    '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>';
-                }}
-              />
-            </div>
-            <div className="text-left">
-              <span className="block font-heading text-xl font-bold text-ink leading-none tracking-wider">
-                PRO FIX
-              </span>
-              <span className="block text-orange text-xs font-body tracking-widest uppercase font-semibold">
-                Handyman
-              </span>
-            </div>
+            <img
+              src="/assets/generated/pfh-logo.dim_200x200.png"
+              alt="PFH Pro Fix Handyman Logo"
+              className="h-12 w-auto object-contain"
+            />
           </button>
 
           {/* Desktop Nav */}
@@ -69,7 +54,7 @@ export default function Navigation() {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="px-4 py-2 font-heading text-sm font-semibold tracking-wider uppercase text-ink-light hover:text-orange transition-colors duration-200 relative group"
+                className="px-4 py-2 font-heading text-sm font-semibold tracking-wider uppercase text-ink hover:text-orange transition-colors duration-200 relative group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-orange transition-all duration-200 group-hover:w-4/5" />
@@ -105,7 +90,7 @@ export default function Navigation() {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-left px-4 py-3 font-heading text-sm font-semibold tracking-wider uppercase text-ink-light hover:text-orange hover:bg-snow-off transition-colors duration-200"
+              className="text-left px-4 py-3 font-heading text-sm font-semibold tracking-wider uppercase text-ink hover:text-orange hover:bg-snow-off transition-colors duration-200"
             >
               {link.label}
             </button>

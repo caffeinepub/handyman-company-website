@@ -1,32 +1,57 @@
 {
   "kind": "build_request",
-  "title": "Display email as plain text instead of clickable link",
+  "title": "Keep white text on image background section, revert all other text to black",
+  "projectName": "ProfX Handyman",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In the Contact component, replace the mailto anchor link for profxhandyman@gmail.com with a plain, non-clickable text element (e.g., a <span> or <p>) that displays the email address as static text.",
+      "text": "In the Hero section (which has the background image), keep all text — including the headline, tagline, stat labels (Years Experience, Jobs Completed, Satisfaction), and the subheading — styled as white (text-white).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-4",
+          "msg-5"
         ],
         "quotes": [
-          "Can you make the email not clickable just add it as a text"
+          "keep the page with the image white and the rest turn back to black"
         ]
       },
       "acceptanceCriteria": [
-        "The email address profxhandyman@gmail.com is visible in the Contact section.",
-        "Clicking or hovering over the email address does not navigate or open an email client.",
-        "No anchor tag or mailto: href is used for the email display.",
-        "The email text styling matches the surrounding contact info text."
+        "All text inside the Hero component (background image section) remains white.",
+        "Stat labels 'Years Experience', 'Jobs Completed', 'Satisfaction' remain white.",
+        "Hero headline and tagline remain white."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "In all non-Hero sections — About, Services, Contact, Footer, and Navigation — change all text that was previously overridden to white (text-white) back to black (text-gray-900 or equivalent dark/ink color), restoring the default dark text appearance.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-5"
+        ],
+        "quotes": [
+          "keep the page with the image white and the rest turn back to black"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Body text, labels, descriptions, and headings in About, Services, Contact, Footer, and Navigation sections are displayed in black or dark ink color.",
+        "No white text appears on sections that do not have a dark/image background.",
+        "The overall page is readable with dark text on light/white section backgrounds."
       ]
     }
   ],
-  "constraints": [],
+  "constraints": [
+    "Do not change the PFH logo in the Navigation component.",
+    "Do not alter layout, spacing, or component structure — only text color changes are in scope.",
+    "Immutable frontend paths (hooks, main.tsx, ui components) must not be modified."
+  ],
   "nonGoals": [
-    "Changing any other contact details (phone number, address, hours).",
-    "Modifying any other sections of the site."
+    "Changing background colors of any section.",
+    "Adding new content or components.",
+    "Modifying the backend."
   ],
   "imageRequirements": {
     "required": [],

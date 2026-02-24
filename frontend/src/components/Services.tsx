@@ -70,7 +70,7 @@ export default function Services() {
           </p>
           <h2 className="section-title text-ink mb-4">Our Services</h2>
           <div className="w-16 h-1 bg-orange mx-auto mb-6" />
-          <p className="font-body text-ink-muted max-w-2xl mx-auto text-base leading-relaxed font-medium">
+          <p className="font-body text-ink max-w-2xl mx-auto text-base leading-relaxed font-medium">
             We offer a comprehensive range of handyman services to keep your home running smoothly. No job is too small — we take pride in every task we complete.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function Services() {
                 <div className="w-8 h-0.5 bg-orange mb-3 group-hover:w-12 transition-all duration-300" />
 
                 {/* Description */}
-                <p className="font-body text-sm text-ink-muted leading-relaxed font-medium">
+                <p className="font-body text-sm text-ink leading-relaxed font-medium">
                   {service.description}
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function Services() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-14">
-          <p className="font-body text-ink-light font-medium mb-4">
+          <p className="font-body text-ink font-medium mb-4">
             Don't see what you need? We handle many more tasks!
           </p>
           <button

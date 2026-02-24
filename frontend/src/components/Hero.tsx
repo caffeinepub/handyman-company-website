@@ -47,7 +47,7 @@ export default function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className="font-body text-lg sm:text-xl text-ink-light max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+        <p className="font-body text-lg sm:text-xl text-white max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
           From small repairs to major renovations — we get the job done right, on time, and within budget. Serving the community with pride for over 20 years.
         </p>
 
@@ -78,7 +78,7 @@ export default function Hero() {
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-heading text-3xl font-bold text-orange">{stat.value}</div>
-              <div className="font-body text-xs text-ink-muted font-semibold uppercase tracking-wider mt-1">{stat.label}</div>
+              <div className="font-body text-xs text-white font-semibold uppercase tracking-wider mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -87,7 +87,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <button
         onClick={scrollToServices}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ink-light hover:text-orange transition-colors duration-200 animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white hover:text-orange transition-colors duration-200 animate-bounce"
         aria-label="Scroll down"
       >
         <ArrowDown size={24} />
