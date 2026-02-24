@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Handyman/contractor website project covering Philadelphia and New Jersey. User is iterating on design and content. Currently fixing text contrast issues where text blends into background.",
+  "architectural_notes": [],
+  "known_issues": [
+    "Text contrast issues: some text blends into the background and needs color adjustments for readability"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-audit-and-fix-all-text-contrast-issues-across-every-section-of-the-site-navigation-hero-services-about-contact-footer-so-that-no-text-blends-into-its-background-ensure-all-text-colors-have-sufficient-contrast-against-their-respective-backgrounds-adjusting-foreground-colors-adding-text-shadows-or-changing-background-overlays-as-needed-to-make-every-word-crisp-and-legible",
+      "title": "Audit and fix all text contrast issues across every section of the site (Navigation, Hero, Services, About, Contact, Footer) so that no text blends into its background. Ensure all text colors have sufficient contrast against their respective backgrounds, adjusting foreground colors, adding text shadows, or changing background overlays as needed to make every word crisp and legible.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "gameProjectType": "none",
+  "projectName": "Pro Fix Handyman",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

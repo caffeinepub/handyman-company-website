@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report documenting the text contrast audit and fix feature, listing the affected frontend files and components with high confidence.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of each frontend source file, describing the contrast and typography changes made to each component and config file.",
+  "frontend/index.css": "Global Tailwind CSS entry point defining OKLCH-based CSS custom properties for light and dark themes including colors, borders, and sidebar tokens.",
+  "frontend/index.html": "HTML shell for the React app titled 'Handyman Company Website' that mounts the app at the root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component that composes the full single-page layout and auto-displays the CustomizationPrompt dialog 800ms after mount.",
+  "frontend/src/components/About.tsx": "About section component displaying company story, founder quote, and a grid of trust highlight cards with icons, using font-medium and darkened border colors for improved contrast.",
+  "frontend/src/components/Contact.tsx": "Contact section with a quote request form and contact info panel, featuring bold labels, medium-weight text, and darkened borders for legibility.",
+  "frontend/src/components/CustomizationPrompt.tsx": "Dialog modal prompting users to describe website customizations, with toggleable quick-pick category chips and a free-text textarea for detailed instructions.",
+  "frontend/src/components/Footer.tsx": "Renders the site footer with brand info, contact details, quick navigation links, and a services list for the Pro Fix Handyman website.",
+  "frontend/src/components/Hero.tsx": "Full-screen hero section with a background image, headline, tagline, CTA buttons (get a quote / call), and summary stats for the handyman business.",
+  "frontend/src/components/Navigation.tsx": "Fixed top navigation bar with smooth-scroll links, a logo, a 'Get a Quote' CTA button, and a responsive mobile hamburger menu.",
+  "frontend/src/components/Services.tsx": "Displays a grid of eight handyman service cards (plumbing, electrical, carpentry, etc.) with icons, descriptions, and a service-area banner.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries when the identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an Internet Identity authentication context and hook, managing AuthClient creation, login/logout flow, delegation validation, and login status state.",
+  "frontend/src/index.css": "Global CSS file that imports Google Fonts (Oswald, Inter), sets up Tailwind directives, and defines CSS custom properties for light/dark themes using oklch colors with an orange primary accent. Also includes utility classes for orange backgrounds, text colors, section titles, and dividers.",
+  "frontend/src/main.tsx": "React app entry point that renders the root component wrapped in QueryClientProvider (React Query) and InternetIdentityProvider for authentication context.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom fonts (Oswald, Inter), oklch-based color tokens (orange, ink, snow palettes), custom shadows, border radii, and keyframe animations including accordion and fade-in-up effects.",
+  "project_state.json": "Project state metadata for a handyman/contractor website (Pro Fix Handyman) covering Philadelphia and New Jersey, currently at version 3 with an active fix request to resolve text contrast issues across all site sections."
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "build_request",
+  "title": "Fix text contrast issues across all sections",
+  "projectName": "Pro Fix Handyman",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Audit and fix all text contrast issues across every section of the site (Navigation, Hero, Services, About, Contact, Footer) so that no text blends into its background. Ensure all text colors have sufficient contrast against their respective backgrounds, adjusting foreground colors, adding text shadows, or changing background overlays as needed to make every word crisp and legible.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3",
+          "msg-5"
+        ],
+        "quotes": [
+          "i still see some of the text blending in with the background can you please fix that for me"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All body text, headings, labels, and UI text are clearly readable against their backgrounds throughout the entire page",
+        "No text in the Hero section blends into the background image — add overlays or text shadows if needed",
+        "Navigation links and logo text are fully legible against the nav bar background",
+        "Service cards, About section text, and Contact section text all have sufficient contrast",
+        "Footer text is readable against the footer background",
+        "Orange-on-white and white-on-dark combinations maintain strong contrast",
+        "No text appears faded, washed out, or difficult to read at any section"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not change layout, structure, or content — only fix text/background color contrast",
+    "Do not modify files in frontend/src/hooks/ or frontend/src/main.tsx"
+  ],
+  "nonGoals": [
+    "Adding new sections or content",
+    "Redesigning the color palette or brand identity",
+    "Changing fonts or typography scale"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
