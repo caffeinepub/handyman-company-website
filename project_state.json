@@ -1,23 +1,32 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Handyman/contractor website project covering Philadelphia and New Jersey. User is iterating on design and content. Currently fixing text contrast issues where text blends into background.",
-  "architectural_notes": [],
+  "summary": "Website project deployed on the Internet Computer. User wants the admin/edit overlay panel ('What would you like to change?') fully removed from the codebase.",
+  "architectural_notes": [
+    "Site is deployed on the Internet Computer (ICP) with a canister-based URL"
+  ],
   "known_issues": [
-    "Text contrast issues: some text blends into the background and needs color adjustments for readability"
+    "Admin/edit overlay panel appears above page content for all visitors across all devices — needs full removal"
   ],
   "isFixRequest": true,
   "existing_features": [
     {
-      "id": "feature-audit-and-fix-all-text-contrast-issues-across-every-section-of-the-site-navigation-hero-services-about-contact-footer-so-that-no-text-blends-into-its-background-ensure-all-text-colors-have-sufficient-contrast-against-their-respective-backgrounds-adjusting-foreground-colors-adding-text-shadows-or-changing-background-overlays-as-needed-to-make-every-word-crisp-and-legible",
-      "title": "Audit and fix all text contrast issues across every section of the site (Navigation, Hero, Services, About, Contact, Footer) so that no text blends into its background. Ensure all text colors have sufficient contrast against their respective backgrounds, adjusting foreground colors, adding text shadows, or changing background overlays as needed to make every word crisp and legible.",
+      "id": "feature-fully-remove-the-customizationprompt-component-and-all-references-to-it-from-the-codebase-delete-the-file-frontend-src-components-customizationprompt-tsx-and-remove-its-import-state-management-the-800ms-auto-display-timer-and-rendering-from-frontend-src-app-tsx-so-the-overlay-never-appears-for-any-visitor-on-any-device",
+      "title": "Fully remove the CustomizationPrompt component and all references to it from the codebase. Delete the file frontend/src/components/CustomizationPrompt.tsx and remove its import, state management (the 800ms auto-display timer), and rendering from frontend/src/App.tsx so the overlay never appears for any visitor on any device.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Fully remove the admin/edit overlay panel ('What would you like to change?') from the site so it never appears for any visitor",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
   "gameProjectType": "none",
   "projectName": "Pro Fix Handyman",
   "clarification_mode": "instant",

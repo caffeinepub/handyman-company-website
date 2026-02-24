@@ -1,60 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Fix text contrast issues across all sections",
+  "title": "Remove admin/edit overlay panel (CustomizationPrompt) from the site",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Audit and fix all text contrast issues across every section (Navigation, Hero, Services, About, Contact, Footer) to ensure all text is crisp and legible against backgrounds",
+      "summary": "Fully remove the CustomizationPrompt component and all references to it from the codebase",
       "acceptanceCriteria": [
-        "All body text, headings, labels, and UI text are clearly readable against their backgrounds throughout the entire page",
-        "No text in the Hero section blends into the background image — add overlays or text shadows if needed",
-        "Navigation links and logo text are fully legible against the nav bar background",
-        "Service cards, About section text, and Contact section text all have sufficient contrast",
-        "Footer text is readable against the footer background",
-        "Orange-on-white and white-on-dark combinations maintain strong contrast",
-        "No text appears faded, washed out, or difficult to read at any section"
+        "The 'What would you like to change?' dialog/overlay no longer appears on page load or at any point during site navigation.",
+        "CustomizationPrompt.tsx is deleted or no longer referenced anywhere in the project.",
+        "No auto-display timer (setTimeout/800ms) for the overlay remains in App.tsx.",
+        "The site renders normally without any admin panel for all visitors across all devices."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Review and strengthen the oklch color token values for --foreground, --primary, --muted-foreground, and other text-related tokens to ensure high contrast ratios (WCAG AA minimum 4.5:1 for body text, 3:1 for large text). Adjust lightness values in oklch definitions to create stronger foreground-to-background separation across light and dark themes."
+          "path": "frontend/src/components/CustomizationPrompt.tsx",
+          "operation": "delete",
+          "description": "Delete the CustomizationPrompt component file completely from the codebase."
         },
         {
-          "path": "frontend/src/components/Navigation.tsx",
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Add stronger text color classes (e.g., text-ink-900 or text-gray-900) to navigation links and logo text to ensure they stand out against the nav bar background. If the nav bar has a light background, use very dark text; if dark, use very light text. Apply font-semibold or font-bold if needed for better visibility."
-        },
-        {
-          "path": "frontend/src/components/Hero.tsx",
-          "operation": "modify",
-          "description": "Add a semi-transparent dark overlay (e.g., bg-black/60 or bg-ink-950/70) over the hero background image to create sufficient contrast for white text. Apply text-shadow utilities (shadow-lg or custom drop-shadow classes) to the headline and tagline to ensure they remain crisp and legible. Verify CTA button text has strong contrast against button backgrounds (e.g., white text on orange buttons, dark text on white buttons)."
-        },
-        {
-          "path": "frontend/src/components/Services.tsx",
-          "operation": "modify",
-          "description": "Ensure service card titles and descriptions use high-contrast text colors (e.g., text-ink-900 for dark text on light card backgrounds, or text-snow-50 for light text on dark backgrounds). If cards have colored backgrounds, verify text meets WCAG contrast requirements. Strengthen the service-area banner text color to stand out against its background (apply text-ink-900 or add a contrasting background overlay)."
-        },
-        {
-          "path": "frontend/src/components/About.tsx",
-          "operation": "modify",
-          "description": "Review all text elements (company story paragraphs, trust badges, founder blockquote, highlight cards) and apply high-contrast text classes. Use text-ink-900 or text-gray-900 for body text on light backgrounds. For the founder blockquote, ensure the text is dark enough to be legible. For highlight cards with icons, ensure card text (titles and descriptions) have strong contrast against card backgrounds."
-        },
-        {
-          "path": "frontend/src/components/Contact.tsx",
-          "operation": "modify",
-          "description": "Strengthen text contrast in the contact form (labels, input placeholders, button text) and contact info panel. Use text-ink-900 for form labels and info text on light backgrounds. Ensure the orange-accented service area note has sufficient contrast (either darken the orange or add a contrasting background). Verify submit button text is highly legible against the button background."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Fix footer text contrast by using light text colors (text-snow-50, text-snow-100, or text-gray-100) if the footer has a dark background, or dark text colors (text-ink-900, text-gray-900) if the footer has a light background. Ensure all footer links, contact details, and section headings are fully readable. Apply text-sm or text-base classes with sufficient weight (font-medium or font-semibold) for better legibility."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Review and adjust custom color palette definitions (orange, ink, snow) to ensure they provide sufficient contrast when used as text/background pairs. Add utility classes for text-shadow or drop-shadow if not already present, to support Hero section text legibility. Ensure the color scale (50-950) provides distinct steps for accessible foreground/background combinations."
+          "description": "Remove the import statement for CustomizationPrompt, delete all state management related to the dialog (including the 800ms setTimeout auto-display timer), and remove the CustomizationPrompt JSX element from the render tree so the overlay never appears."
         }
       ]
     }
