@@ -1,57 +1,56 @@
 {
   "kind": "build_request",
-  "title": "Keep white text on image background section, revert all other text to black",
-  "projectName": "ProfX Handyman",
+  "title": "Remove Licensed & Insured tab and related text",
+  "projectName": "Handyman Company Website",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In the Hero section (which has the background image), keep all text — including the headline, tagline, stat labels (Years Experience, Jobs Completed, Satisfaction), and the subheading — styled as white (text-white).",
+      "text": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears (e.g., in the About component).",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4",
-          "msg-5"
+          "msg-6"
         ],
         "quotes": [
-          "keep the page with the image white and the rest turn back to black"
+          "remove the tab that says Licensed & Insured",
+          "Removing the 'Licensed & Insured' tab"
         ]
       },
       "acceptanceCriteria": [
-        "All text inside the Hero component (background image section) remains white.",
-        "Stat labels 'Years Experience', 'Jobs Completed', 'Satisfaction' remain white.",
-        "Hero headline and tagline remain white."
+        "No element with the label 'Licensed & Insured' appears anywhere on the page.",
+        "Remaining tabs/badges are unaffected and display correctly."
       ]
     },
     {
       "id": "REQ-2",
-      "text": "In all non-Hero sections — About, Services, Contact, Footer, and Navigation — change all text that was previously overridden to white (text-white) back to black (text-gray-900 or equivalent dark/ink color), restoring the default dark text appearance.",
+      "text": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page, including any section descriptions or sub-labels that reference licensing/bonding/insurance.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4",
-          "msg-5"
+          "msg-6"
         ],
         "quotes": [
-          "keep the page with the image white and the rest turn back to black"
+          "Fully licensed, bonded, and insured for your peace of mind.",
+          "the Licensed one"
         ]
       },
       "acceptanceCriteria": [
-        "Body text, labels, descriptions, and headings in About, Services, Contact, Footer, and Navigation sections are displayed in black or dark ink color.",
-        "No white text appears on sections that do not have a dark/image background.",
-        "The overall page is readable with dark text on light/white section backgrounds."
+        "The phrase 'Fully licensed, bonded, and insured for your peace of mind' does not appear anywhere on the page.",
+        "No other licensing-related badge or text referencing this content remains visible.",
+        "Surrounding layout remains intact and does not show empty gaps or broken spacing."
       ]
     }
   ],
   "constraints": [
-    "Do not change the PFH logo in the Navigation component.",
-    "Do not alter layout, spacing, or component structure — only text color changes are in scope.",
-    "Immutable frontend paths (hooks, main.tsx, ui components) must not be modified."
+    "Do not modify any files listed under frontend.immutablePaths.",
+    "Do not alter any other content, styling, or layout outside of the Licensed & Insured removal."
   ],
   "nonGoals": [
-    "Changing background colors of any section.",
-    "Adding new content or components.",
-    "Modifying the backend."
+    "Redesigning or restructuring the About, Navigation, or Footer sections beyond the specified removals.",
+    "Adding new trust badges or replacing the removed content with anything else."
   ],
   "imageRequirements": {
     "required": [],

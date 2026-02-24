@@ -1,41 +1,40 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T23:39:55.697Z",
+  "generatedAt": "2026-02-24T23:46:04.046Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
     "total": 2,
-    "implemented": 1,
+    "implemented": 2,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "In the Hero section (which has the background image), keep all text — including the headline, tagline, stat labels (Years Experience, Jobs Completed, Satisfaction), and the subheading — styled as white (text-white).",
-        "status": "missing",
+        "summary": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears (e.g., in the About component).",
+        "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Hero.tsx"
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/About.tsx"
         ],
-        "matchedFiles": []
+        "matchedFiles": [
+          "frontend/src/components/About.tsx"
+        ]
       },
       {
         "id": "REQ-2",
-        "summary": "In all non-Hero sections — About, Services, Contact, Footer, and Navigation — change all text that was previously overridden to white (text-white) back to black (text-gray-900 or equivalent dark/ink color), restoring the default dark text appearance.",
+        "summary": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page, including any section descriptions or sub-labels that reference licensing/bonding/insurance.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/About.tsx",
-          "frontend/src/components/Services.tsx",
-          "frontend/src/components/Contact.tsx",
+          "frontend/src/components/Hero.tsx",
           "frontend/src/components/Footer.tsx",
-          "frontend/src/components/Navigation.tsx"
+          "frontend/src/components/Services.tsx"
         ],
         "matchedFiles": [
           "frontend/src/components/About.tsx",
-          "frontend/src/components/Services.tsx",
-          "frontend/src/components/Contact.tsx",
-          "frontend/src/components/Footer.tsx",
-          "frontend/src/components/Navigation.tsx"
+          "frontend/src/components/Hero.tsx"
         ]
       }
     ]
@@ -46,10 +45,7 @@
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/components/About.tsx",
-    "frontend/src/components/Contact.tsx",
-    "frontend/src/components/Footer.tsx",
-    "frontend/src/components/Navigation.tsx",
-    "frontend/src/components/Services.tsx",
+    "frontend/src/components/Hero.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -1,7 +1,6 @@
-import { ShieldCheck, Star, Clock, Award, Users, Wrench } from 'lucide-react';
+import { Star, Clock, Award, Users, Wrench } from 'lucide-react';
 
 const highlights = [
-  { icon: ShieldCheck, title: 'Licensed & Insured', desc: 'Fully licensed, bonded, and insured for your peace of mind.' },
   { icon: Clock, title: '20+ Years Experience', desc: 'Over two decades of hands-on expertise in home repairs and renovations.' },
   { icon: Star, title: '5-Star Rated', desc: 'Consistently top-rated by hundreds of satisfied homeowners.' },
   { icon: Award, title: 'Quality Guaranteed', desc: 'Every job backed by our 100% satisfaction guarantee.' },
@@ -40,7 +39,7 @@ export default function About() {
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-3 mt-8">
-              {['Licensed', 'Bonded', 'Insured', 'Background Checked', '20+ Yrs Experience'].map((badge) => (
+              {['Background Checked', '20+ Yrs Experience'].map((badge) => (
                 <span
                   key={badge}
                   className="px-3 py-1.5 border border-orange/60 text-orange font-body text-xs tracking-wider uppercase bg-orange-subtle font-semibold"

@@ -34,12 +34,6 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/40 text-orange px-4 py-1.5 mb-8 text-xs font-body font-semibold tracking-widest uppercase">
-          <span className="w-1.5 h-1.5 rounded-full bg-orange inline-block" />
-          Licensed & Insured Professionals
-        </div>
-
         {/* Headline */}
         <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-ink uppercase leading-none tracking-wide mb-4">
           Pro Fix

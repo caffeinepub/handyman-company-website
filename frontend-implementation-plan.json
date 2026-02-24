@@ -1,57 +1,56 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Keep white text on image background section, revert all other text to black",
+  "title": "Remove Licensed & Insured tab and related text",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Keep all text in the Hero section (background image) white, including headline, tagline, stat labels, and subheading",
+      "summary": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears",
       "acceptanceCriteria": [
-        "All text inside the Hero component (background image section) remains white.",
-        "Stat labels 'Years Experience', 'Jobs Completed', 'Satisfaction' remain white.",
-        "Hero headline and tagline remain white."
+        "No element with the label 'Licensed & Insured' appears anywhere on the page.",
+        "Remaining tabs/badges are unaffected and display correctly."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Hero.tsx",
+          "path": "frontend/src/components/Navigation.tsx",
           "operation": "modify",
-          "description": "Review and ensure all text elements (headline, tagline, stat labels, subheading, scroll indicator text) use text-white or equivalent white text utility classes. Verify that no text in this component uses dark/black color classes."
+          "description": "Remove any navigation link, tab, or menu item with the label 'Licensed & Insured' from the navigation bar. Ensure all remaining navigation elements continue to function correctly and maintain proper spacing."
+        },
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "modify",
+          "description": "Remove any trust badge or element displaying 'Licensed & Insured' from the trust badges section and any other location in the About component. Ensure the remaining trust badges display correctly without empty gaps or broken layout."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Change all text in non-Hero sections (About, Services, Contact, Footer, Navigation) from white back to black or dark ink color",
+      "summary": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page",
       "acceptanceCriteria": [
-        "Body text, labels, descriptions, and headings in About, Services, Contact, Footer, and Navigation sections are displayed in black or dark ink color.",
-        "No white text appears on sections that do not have a dark/image background.",
-        "The overall page is readable with dark text on light/white section backgrounds."
+        "The phrase 'Fully licensed, bonded, and insured for your peace of mind' does not appear anywhere on the page.",
+        "No other licensing-related badge or text referencing this content remains visible.",
+        "Surrounding layout remains intact and does not show empty gaps or broken spacing."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/About.tsx",
           "operation": "modify",
-          "description": "Replace all text-white classes with text-gray-900 or text-ink for body text, descriptions, quotes, and labels. Ensure headings and paragraph text display in dark ink on the light background."
+          "description": "Remove all instances of the text 'Fully licensed, bonded, and insured for your peace of mind' including any section descriptions, sub-labels, or supporting text that references licensing, bonding, or insurance. Maintain proper layout and spacing for remaining content."
         },
         {
-          "path": "frontend/src/components/Services.tsx",
+          "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Change any white text classes to text-gray-900 or text-ink for service card titles, descriptions, section headers, and the service area banner text. Ensure all text is readable as dark on light background."
-        },
-        {
-          "path": "frontend/src/components/Contact.tsx",
-          "operation": "modify",
-          "description": "Replace text-white classes with text-gray-900 or text-ink for contact descriptions, labels, card text, and CTA messaging. Keep all contact section text dark for readability on light background."
+          "description": "Search for and remove any occurrence of 'Fully licensed, bonded, and insured for your peace of mind' or similar licensing-related text in the hero section. Ensure the hero layout remains visually intact."
         },
         {
           "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Change all text-white classes to text-gray-900 or text-ink for footer descriptions, quick links, service lists, and contact details. Restore dark text appearance for all footer content."
+          "description": "Search for and remove any occurrence of 'Fully licensed, bonded, and insured for your peace of mind' or similar licensing-related text in the footer section. Maintain proper footer structure and spacing."
         },
         {
-          "path": "frontend/src/components/Navigation.tsx",
+          "path": "frontend/src/components/Services.tsx",
           "operation": "modify",
-          "description": "Replace any text-white classes with text-gray-900 or text-ink for navigation links and menu items (both desktop and mobile). Do not modify the PFH logo. Ensure nav text is dark and readable."
+          "description": "Search for and remove any occurrence of 'Fully licensed, bonded, and insured for your peace of mind' or similar licensing-related text in the services section. Ensure service cards and layout remain properly structured."
         }
       ]
     }

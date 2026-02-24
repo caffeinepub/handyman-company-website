@@ -1,16 +1,22 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Website project with a background image section (white text) and remaining sections with black text. Features a PFH logo and statistics like Years Experience, Jobs Completed, and Satisfaction.",
-  "architectural_notes": [
-    "Text color rule: white text only on sections with background image; all other text black"
-  ],
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-all-non-hero-sections-about-services-contact-footer-and-navigation-change-all-text-that-was-previously-overridden-to-white-text-white-back-to-black-text-gray-900-or-equivalent-dark-ink-color-restoring-the-default-dark-text-appearance",
-      "title": "In all non-Hero sections — About, Services, Contact, Footer, and Navigation — change all text that was previously overridden to white (text-white) back to black (text-gray-900 or equivalent dark/ink color), restoring the default dark text appearance.",
+      "id": "feature-remove-the-licensed-insured-tab-badge-from-the-navigation-bar-and-any-trust-badges-section-where-it-appears-e-g-in-the-about-component",
+      "title": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears (e.g., in the About component).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-occurrences-of-the-text-fully-licensed-bonded-and-insured-for-your-peace-of-mind-from-the-page-including-any-section-descriptions-or-sub-labels-that-reference-licensing-bonding-insurance",
+      "title": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page, including any section descriptions or sub-labels that reference licensing/bonding/insurance.",
       "reqIds": [
         "REQ-2"
       ],
@@ -20,15 +26,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "In the Hero section (which has the background image), keep all text — including the headline, tagline, stat labels (Years Experience, Jobs Completed, Satisfaction), and the subheading — styled as white (text-white).",
-      "reqIds": [
-        "REQ-1"
-      ],
+      "summary": "Remove the 'Licensed & Insured' tab and 'Fully licensed, bonded, and insured for your peace of mind' text from the page",
+      "reqIds": [],
       "status": "pending"
     }
   ],
-  "gameProjectType": "none",
-  "projectName": "PFH Website",
+  "projectName": "Handyman Company Website",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
