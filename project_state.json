@@ -1,34 +1,23 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Website project deployed on the Internet Computer. User wants the admin/edit overlay panel ('What would you like to change?') fully removed from the codebase.",
-  "architectural_notes": [
-    "Site is deployed on the Internet Computer (ICP) with a canister-based URL"
-  ],
-  "known_issues": [
-    "Admin/edit overlay panel appears above page content for all visitors across all devices — needs full removal"
-  ],
-  "isFixRequest": true,
+  "summary": "Handyman business website (profxhandyman) with contact email displayed as plain text.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-fully-remove-the-customizationprompt-component-and-all-references-to-it-from-the-codebase-delete-the-file-frontend-src-components-customizationprompt-tsx-and-remove-its-import-state-management-the-800ms-auto-display-timer-and-rendering-from-frontend-src-app-tsx-so-the-overlay-never-appears-for-any-visitor-on-any-device",
-      "title": "Fully remove the CustomizationPrompt component and all references to it from the codebase. Delete the file frontend/src/components/CustomizationPrompt.tsx and remove its import, state management (the 800ms auto-display timer), and rendering from frontend/src/App.tsx so the overlay never appears for any visitor on any device.",
+      "id": "feature-in-the-contact-component-replace-the-mailto-anchor-link-for-profxhandyman-gmail-com-with-a-plain-non-clickable-text-element-e-g-a-span-or-p-that-displays-the-email-address-as-static-text",
+      "title": "In the Contact component, replace the mailto anchor link for profxhandyman@gmail.com with a plain, non-clickable text element (e.g., a <span> or <p>) that displays the email address as static text.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Fully remove the admin/edit overlay panel ('What would you like to change?') from the site so it never appears for any visitor",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
+  "new_feature_requests": [],
   "gameProjectType": "none",
-  "projectName": "Pro Fix Handyman",
+  "projectName": "ProfX Handyman",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

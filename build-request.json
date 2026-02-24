@@ -1,38 +1,32 @@
 {
   "kind": "build_request",
-  "title": "Remove admin/edit overlay panel (CustomizationPrompt) from the site",
-  "projectName": "Pro Fix Handyman",
-  "priority": "high",
+  "title": "Display email as plain text instead of clickable link",
+  "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Fully remove the CustomizationPrompt component and all references to it from the codebase. Delete the file frontend/src/components/CustomizationPrompt.tsx and remove its import, state management (the 800ms auto-display timer), and rendering from frontend/src/App.tsx so the overlay never appears for any visitor on any device.",
+      "text": "In the Contact component, replace the mailto anchor link for profxhandyman@gmail.com with a plain, non-clickable text element (e.g., a <span> or <p>) that displays the email address as static text.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-recent"
+          "msg-4"
         ],
         "quotes": [
-          "it popes up right above all the task i want it to be fully removed as i will not needing it",
-          "Yes please start"
+          "Can you make the email not clickable just add it as a text"
         ]
       },
       "acceptanceCriteria": [
-        "The 'What would you like to change?' dialog/overlay no longer appears on page load or at any point during site navigation.",
-        "CustomizationPrompt.tsx is deleted or no longer referenced anywhere in the project.",
-        "No auto-display timer (setTimeout/800ms) for the overlay remains in App.tsx.",
-        "The site renders normally without any admin panel for all visitors across all devices."
+        "The email address profxhandyman@gmail.com is visible in the Contact section.",
+        "Clicking or hovering over the email address does not navigate or open an email client.",
+        "No anchor tag or mailto: href is used for the email display.",
+        "The email text styling matches the surrounding contact info text."
       ]
     }
   ],
-  "constraints": [
-    "Do not modify any immutable frontend paths (hooks, main.tsx, ui components).",
-    "Do not alter any other visible site sections — only remove the CustomizationPrompt overlay."
-  ],
+  "constraints": [],
   "nonGoals": [
-    "Adding any replacement admin interface.",
-    "Changing any other component styling or content.",
-    "Backend changes."
+    "Changing any other contact details (phone number, address, hours).",
+    "Modifying any other sections of the site."
   ],
   "imageRequirements": {
     "required": [],

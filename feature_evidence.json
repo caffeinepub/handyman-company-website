@@ -2,11 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-fully-remove-the-customizationprompt-component-and-all-references-to-it-from-the-codebase-delete-the-file-frontend-src-components-customizationprompt-tsx-and-remove-its-import-state-management-the-800ms-auto-display-timer-and-rendering-from-frontend-src-app-tsx-so-the-overlay-never-appears-for-any-visitor-on-any-device",
-      "featureTitle": "Fully remove the CustomizationPrompt component and all references to it from the codebase. Delete the file frontend/src/components/CustomizationPrompt.tsx and remove its import, state management (the 800ms auto-display timer), and rendering from frontend/src/App.tsx so the overlay never appears for any visitor on any device.",
+      "featureId": "feature-in-the-contact-component-replace-the-mailto-anchor-link-for-profxhandyman-gmail-com-with-a-plain-non-clickable-text-element-e-g-a-span-or-p-that-displays-the-email-address-as-static-text",
+      "featureTitle": "In the Contact component, replace the mailto anchor link for profxhandyman@gmail.com with a plain, non-clickable text element (e.g., a <span> or <p>) that displays the email address as static text.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/CustomizationPrompt.tsx"
+        "frontend/src/components/Contact.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",

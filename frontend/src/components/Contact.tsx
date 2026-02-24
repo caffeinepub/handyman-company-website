@@ -1,24 +1,4 @@
-import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, CheckCircle, Send } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-
-interface FormData {
-  name: string;
-  phone: string;
-  email: string;
-  service: string;
-  message: string;
-}
-
-const initialForm: FormData = {
-  name: '',
-  phone: '',
-  email: '',
-  service: '',
-  message: '',
-};
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const contactInfo = [
   {
@@ -31,7 +11,7 @@ const contactInfo = [
     icon: Mail,
     label: 'Email',
     value: 'profxhandyman@gmail.com',
-    href: 'mailto:profxhandyman@gmail.com',
+    href: null,
   },
   {
     icon: MapPin,
@@ -48,30 +28,6 @@ const contactInfo = [
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState<FormData>(initialForm);
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-    }, 800);
-  };
-
-  const handleReset = () => {
-    setForm(initialForm);
-    setSubmitted(false);
-  };
-
   return (
     <section id="contact" className="py-24 bg-snow-off">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +39,7 @@ export default function Contact() {
           <h2 className="section-title text-ink mb-4">Request a Free Quote</h2>
           <div className="w-16 h-1 bg-orange mx-auto mb-6" />
           <p className="font-body text-ink-light max-w-xl mx-auto text-base leading-relaxed font-medium">
-            Tell us about your project and we'll get back to you within 24 hours with a free, no-obligation estimate.
+            Ready to get started? Reach out directly and we'll get back to you within 24 hours with a free, no-obligation estimate.
           </p>
           {/* Service Area Note */}
           <div className="inline-flex items-center gap-2 mt-5 px-4 py-2 border border-orange/60 bg-orange-subtle">
@@ -95,134 +51,48 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Form */}
-          <div className="lg:col-span-3">
-            {submitted ? (
-              <div className="flex flex-col items-center justify-center py-20 text-center">
-                <div className="w-16 h-16 bg-orange-subtle flex items-center justify-center mb-6">
-                  <CheckCircle size={32} className="text-orange" />
-                </div>
-                <h3 className="font-heading text-2xl font-bold text-ink uppercase tracking-wide mb-3">
-                  Message Sent!
-                </h3>
-                <p className="font-body text-ink-light max-w-sm mb-8 leading-relaxed font-medium">
-                  Thanks for reaching out! We'll review your request and get back to you within 24 hours.
-                </p>
-                <button
-                  onClick={handleReset}
-                  className="px-6 py-3 bg-orange text-snow font-heading font-bold text-sm tracking-wider uppercase hover:bg-orange-dark transition-colors duration-200"
-                >
-                  Send Another Message
-                </button>
+          {/* Quote CTA */}
+          <div className="lg:col-span-3 flex flex-col justify-center">
+            <div className="bg-snow border border-border p-10 shadow-xs text-center flex flex-col items-center gap-6">
+              {/* Icon */}
+              <div className="w-20 h-20 bg-orange-subtle flex items-center justify-center">
+                <Mail size={36} className="text-orange" />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div className="space-y-1.5">
-                    <Label htmlFor="name" className="font-heading text-xs font-bold text-ink uppercase tracking-wider">
-                      Full Name *
-                    </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={form.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="John Smith"
-                      className="border-border bg-snow text-ink placeholder:text-ink-muted focus:border-orange focus-visible:ring-orange/30 font-body"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <Label htmlFor="phone" className="font-heading text-xs font-bold text-ink uppercase tracking-wider">
-                      Phone Number
-                    </Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="(555) 000-0000"
-                      className="border-border bg-snow text-ink placeholder:text-ink-muted focus:border-orange focus-visible:ring-orange/30 font-body"
-                    />
-                  </div>
-                </div>
 
-                <div className="space-y-1.5">
-                  <Label htmlFor="email" className="font-heading text-xs font-bold text-ink uppercase tracking-wider">
-                    Email Address *
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="john@example.com"
-                    className="border-border bg-snow text-ink placeholder:text-ink-muted focus:border-orange focus-visible:ring-orange/30 font-body"
-                  />
-                </div>
+              {/* Heading */}
+              <div>
+                <h3 className="font-heading text-2xl font-bold text-ink uppercase tracking-wide mb-3">
+                  Email Us for a Free Quote
+                </h3>
+                <p className="font-body text-ink-light text-base leading-relaxed font-medium max-w-md">
+                  Simply send us an email describing your project and we'll respond with a free, no-obligation estimate — usually within 24 hours.
+                </p>
+              </div>
 
-                <div className="space-y-1.5">
-                  <Label htmlFor="service" className="font-heading text-xs font-bold text-ink uppercase tracking-wider">
-                    Service Needed
-                  </Label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={form.service}
-                    onChange={handleChange}
-                    className="w-full h-10 px-3 py-2 border border-border bg-snow text-ink font-body text-sm focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/30 transition-colors"
-                  >
-                    <option value="">Select a service...</option>
-                    <option value="plumbing">Plumbing</option>
-                    <option value="electrical">Electrical</option>
-                    <option value="carpentry">Carpentry</option>
-                    <option value="painting">Painting</option>
-                    <option value="general">General Repairs</option>
-                    <option value="outdoor">Outdoor & Yard</option>
-                    <option value="appliance">Appliance Installation</option>
-                    <option value="inspection">Home Inspection</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
+              {/* Email Display (plain text) */}
+              <div className="inline-flex items-center gap-3 px-8 py-4 bg-orange-subtle border border-orange/30">
+                <Mail size={18} className="text-orange flex-shrink-0" />
+                <span className="font-heading font-bold text-base tracking-wider uppercase text-ink">
+                  profxhandyman@gmail.com
+                </span>
+              </div>
 
-                <div className="space-y-1.5">
-                  <Label htmlFor="message" className="font-heading text-xs font-bold text-ink uppercase tracking-wider">
-                    Project Details *
-                  </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Describe your project or repair needs..."
-                    rows={5}
-                    className="border-border bg-snow text-ink placeholder:text-ink-muted focus:border-orange focus-visible:ring-orange/30 font-body resize-none"
-                  />
-                </div>
+              {/* Divider */}
+              <div className="w-full flex items-center gap-4">
+                <div className="flex-1 h-px bg-border" />
+                <span className="font-body text-xs text-ink-muted uppercase tracking-widest font-medium">or call us directly</span>
+                <div className="flex-1 h-px bg-border" />
+              </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 bg-orange text-snow font-heading font-bold text-sm tracking-wider uppercase hover:bg-orange-dark transition-colors duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <span className="w-4 h-4 border-2 border-snow/40 border-t-snow rounded-full animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send size={16} />
-                      Send My Request
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+              {/* Phone CTA */}
+              <a
+                href="tel:2677870190"
+                className="inline-flex items-center gap-2 font-heading text-xl font-bold text-orange hover:text-orange-dark transition-colors duration-200 tracking-wide"
+              >
+                <Phone size={20} />
+                267-787-0190
+              </a>
+            </div>
           </div>
 
           {/* Contact Info Panel */}

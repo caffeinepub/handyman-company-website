@@ -1,27 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove admin/edit overlay panel (CustomizationPrompt) from the site",
+  "title": "Display email as plain text instead of clickable link",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Fully remove the CustomizationPrompt component and all references to it from the codebase",
+      "summary": "Replace mailto anchor link for profxhandyman@gmail.com with a plain, non-clickable text element in the Contact component",
       "acceptanceCriteria": [
-        "The 'What would you like to change?' dialog/overlay no longer appears on page load or at any point during site navigation.",
-        "CustomizationPrompt.tsx is deleted or no longer referenced anywhere in the project.",
-        "No auto-display timer (setTimeout/800ms) for the overlay remains in App.tsx.",
-        "The site renders normally without any admin panel for all visitors across all devices."
+        "The email address profxhandyman@gmail.com is visible in the Contact section.",
+        "Clicking or hovering over the email address does not navigate or open an email client.",
+        "No anchor tag or mailto: href is used for the email display.",
+        "The email text styling matches the surrounding contact info text."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/CustomizationPrompt.tsx",
-          "operation": "delete",
-          "description": "Delete the CustomizationPrompt component file completely from the codebase."
-        },
-        {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/Contact.tsx",
           "operation": "modify",
-          "description": "Remove the import statement for CustomizationPrompt, delete all state management related to the dialog (including the 800ms setTimeout auto-display timer), and remove the CustomizationPrompt JSX element from the render tree so the overlay never appears."
+          "description": "Replace the mailto anchor link for profxhandyman@gmail.com with a plain text element (span or p). Remove the anchor tag and href attribute, keeping only the email address as static text. Ensure the text styling (color, font weight, size) matches the surrounding contact information text for visual consistency."
         }
       ]
     }
