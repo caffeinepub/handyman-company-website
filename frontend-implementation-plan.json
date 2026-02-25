@@ -1,56 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove Licensed & Insured tab and related text",
+  "title": "Make phone number on background image white",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears",
+      "summary": "Change the phone number text color to white in the Hero section so it matches the other white text displayed over the background image",
       "acceptanceCriteria": [
-        "No element with the label 'Licensed & Insured' appears anywhere on the page.",
-        "Remaining tabs/badges are unaffected and display correctly."
+        "The phone number displayed in the Hero section over the background image is rendered in white (#ffffff or equivalent).",
+        "The phone number remains clearly legible against the background image.",
+        "No other text colors in the Hero section are unintentionally altered."
       ],
       "file_operations": [
-        {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "modify",
-          "description": "Remove any navigation link, tab, or menu item with the label 'Licensed & Insured' from the navigation bar. Ensure all remaining navigation elements continue to function correctly and maintain proper spacing."
-        },
-        {
-          "path": "frontend/src/components/About.tsx",
-          "operation": "modify",
-          "description": "Remove any trust badge or element displaying 'Licensed & Insured' from the trust badges section and any other location in the About component. Ensure the remaining trust badges display correctly without empty gaps or broken layout."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page",
-      "acceptanceCriteria": [
-        "The phrase 'Fully licensed, bonded, and insured for your peace of mind' does not appear anywhere on the page.",
-        "No other licensing-related badge or text referencing this content remains visible.",
-        "Surrounding layout remains intact and does not show empty gaps or broken spacing."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/About.tsx",
-          "operation": "modify",
-          "description": "Remove all instances of the text 'Fully licensed, bonded, and insured for your peace of mind' including any section descriptions, sub-labels, or supporting text that references licensing, bonding, or insurance. Maintain proper layout and spacing for remaining content."
-        },
         {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Search for and remove any occurrence of 'Fully licensed, bonded, and insured for your peace of mind' or similar licensing-related text in the hero section. Ensure the hero layout remains visually intact."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Search for and remove any occurrence of 'Fully licensed, bonded, and insured for your peace of mind' or similar licensing-related text in the footer section. Maintain proper footer structure and spacing."
-        },
-        {
-          "path": "frontend/src/components/Services.tsx",
-          "operation": "modify",
-          "description": "Search for and remove any occurrence of 'Fully licensed, bonded, and insured for your peace of mind' or similar licensing-related text in the services section. Ensure service cards and layout remain properly structured."
+          "description": "Update the phone number text styling to use white color (text-white or equivalent Tailwind class) to match the other text elements displayed over the background image in the Hero section. Ensure the phone number button or text element has consistent white styling with the headline and tagline."
         }
       ]
     }

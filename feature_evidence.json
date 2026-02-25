@@ -2,28 +2,9 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-licensed-insured-tab-badge-from-the-navigation-bar-and-any-trust-badges-section-where-it-appears-e-g-in-the-about-component",
-      "featureTitle": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears (e.g., in the About component).",
+      "featureId": "feature-in-the-hero-section-change-the-phone-number-text-color-to-white-so-it-matches-the-other-white-text-displayed-over-the-background-image",
+      "featureTitle": "In the Hero section, change the phone number text color to white so it matches the other white text displayed over the background image.",
       "files": [
-        "frontend/src/components/About.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-all-occurrences-of-the-text-fully-licensed-bonded-and-insured-for-your-peace-of-mind-from-the-page-including-any-section-descriptions-or-sub-labels-that-reference-licensing-bonding-insurance",
-      "featureTitle": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page, including any section descriptions or sub-labels that reference licensing/bonding/insurance.",
-      "files": [
-        "frontend/src/components/About.tsx",
         "frontend/src/components/Hero.tsx"
       ],
       "components": [
@@ -34,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-2"
+        "REQ-1"
       ],
       "confidence": "high"
     }

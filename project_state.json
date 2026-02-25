@@ -7,31 +7,16 @@
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-remove-the-licensed-insured-tab-badge-from-the-navigation-bar-and-any-trust-badges-section-where-it-appears-e-g-in-the-about-component",
-      "title": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears (e.g., in the About component).",
+      "id": "feature-in-the-hero-section-change-the-phone-number-text-color-to-white-so-it-matches-the-other-white-text-displayed-over-the-background-image",
+      "title": "In the Hero section, change the phone number text color to white so it matches the other white text displayed over the background image.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-remove-all-occurrences-of-the-text-fully-licensed-bonded-and-insured-for-your-peace-of-mind-from-the-page-including-any-section-descriptions-or-sub-labels-that-reference-licensing-bonding-insurance",
-      "title": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page, including any section descriptions or sub-labels that reference licensing/bonding/insurance.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Remove the 'Licensed & Insured' tab and 'Fully licensed, bonded, and insured for your peace of mind' text from the page",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "projectName": "Handyman Company Website",
+  "new_feature_requests": [],
+  "projectName": "Make phone number on background image white",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

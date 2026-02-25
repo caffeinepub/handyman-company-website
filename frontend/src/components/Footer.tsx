@@ -66,7 +66,7 @@ export default function Footer() {
               </a>
               <span className="inline-flex items-start gap-2 font-body text-sm text-ink font-medium">
                 <MapPin size={14} className="text-orange mt-0.5 flex-shrink-0" />
-                Metro City & Surrounding Areas
+                Philadelphia, PA to New Jersey & surrounding areas
               </span>
             </div>
           </div>

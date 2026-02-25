@@ -56,7 +56,7 @@ export default function Hero() {
           </button>
           <a
             href="tel:2677870190"
-            className="group px-8 py-4 border-2 border-ink/60 text-ink font-heading font-bold text-base tracking-wider uppercase hover:border-orange hover:text-orange transition-all duration-200 flex items-center gap-2"
+            className="group px-8 py-4 border-2 border-white text-white font-heading font-bold text-base tracking-wider uppercase hover:border-orange hover:text-orange transition-all duration-200 flex items-center gap-2"
           >
             <Phone size={18} />
             267-787-0190

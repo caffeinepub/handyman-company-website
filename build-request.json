@@ -1,56 +1,32 @@
 {
   "kind": "build_request",
-  "title": "Remove Licensed & Insured tab and related text",
-  "projectName": "Handyman Company Website",
+  "title": "Make phone number on background image white",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Remove the 'Licensed & Insured' tab/badge from the Navigation bar and any trust badges section where it appears (e.g., in the About component).",
+      "text": "In the Hero section, change the phone number text color to white so it matches the other white text displayed over the background image.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4",
-          "msg-6"
+          "msg-3",
+          "msg-5"
         ],
         "quotes": [
-          "remove the tab that says Licensed & Insured",
-          "Removing the 'Licensed & Insured' tab"
+          "can you make the phone number that is on the background white too pls"
         ]
       },
       "acceptanceCriteria": [
-        "No element with the label 'Licensed & Insured' appears anywhere on the page.",
-        "Remaining tabs/badges are unaffected and display correctly."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Remove all occurrences of the text 'Fully licensed, bonded, and insured for your peace of mind' from the page, including any section descriptions or sub-labels that reference licensing/bonding/insurance.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4",
-          "msg-6"
-        ],
-        "quotes": [
-          "Fully licensed, bonded, and insured for your peace of mind.",
-          "the Licensed one"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The phrase 'Fully licensed, bonded, and insured for your peace of mind' does not appear anywhere on the page.",
-        "No other licensing-related badge or text referencing this content remains visible.",
-        "Surrounding layout remains intact and does not show empty gaps or broken spacing."
+        "The phone number displayed in the Hero section over the background image is rendered in white (#ffffff or equivalent).",
+        "The phone number remains clearly legible against the background image.",
+        "No other text colors in the Hero section are unintentionally altered."
       ]
     }
   ],
-  "constraints": [
-    "Do not modify any files listed under frontend.immutablePaths.",
-    "Do not alter any other content, styling, or layout outside of the Licensed & Insured removal."
-  ],
+  "constraints": [],
   "nonGoals": [
-    "Redesigning or restructuring the About, Navigation, or Footer sections beyond the specified removals.",
-    "Adding new trust badges or replacing the removed content with anything else."
+    "Changing phone number styling in any other section (Contact, Footer, Navigation).",
+    "Modifying the background image itself."
   ],
   "imageRequirements": {
     "required": [],
